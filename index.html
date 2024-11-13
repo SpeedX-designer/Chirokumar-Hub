@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirokumar Hub</title>
+    <style>
+        /* Basic reset and body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #FFD700;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            display: inline-block;
+        }
+
+        /* "Chirokumar" styling */
+        .chirokumar {
+            color: #fff; /* White color */
+        }
+
+        /* "Hub" styling with #ffb300 background */
+        .hub {
+            background-color: #ffb300; /* Orange background */
+            color: #000; /* Black text */
+            padding: 0.2em 0.5em; /* Some padding for a button-like look */
+            border-radius: 5px;
+        }
+
+        /* Main Content Area */
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+            color: #ffb300;
+        }
+
+        /* Video grid with increased gaps */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 2em; /* Increase the space between columns and rows */
+        }
+
+        .video-card {
+            background-color: #1c1c1c;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            padding: 0.5em;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        .video-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .video-card h3 {
+            font-size: 1em;
+            margin: 0.5em 0;
+            color: #ffb300;
+        }
+
+        a {
+            color: #ffb300;
+            text-decoration: none;
+        }
+
+        /* Popup Styling */
+        .popup {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            color: #ffb300;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            width: 300px;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup .yes-button {
+            background-color: #2e2e2e; /* Light black */
+            color: #fff;
+        }
+
+        .popup .exit-button {
+            background-color: #ffb300; /* Green background */
+            color: #000;
+        }
+
+        /* Overlay */
+        .overlay {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            backdrop-filter: blur(5px); /* Apply blur to the overlay */
+            -webkit-backdrop-filter: blur(5px); /* For Safari support */
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 1200px) {
+            .video-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            }
+        }
+
+        @media (max-width: 900px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            }
+
+            header h1 {
+                font-size: 1.5em; /* Adjust header size */
+            }
+
+            .container {
+                padding: 0 1em; /* Padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-grid {
+                grid-template-columns: 1fr; /* 1 column */
+            }
+
+            header h1 {
+                font-size: 1.2em; /* Adjust header size further */
+            }
+
+            .popup {
+                width: 80%; /* Make the popup more responsive */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Overlay and Popup -->
+    <div class="overlay"></div>
+    <div class="popup">
+        <p>Are you 18+ or Chirokumar?</p>
+        <button class="yes-button">Yes, I am 18+. Enter</button>
+        <button class="exit-button">Be Chirokumar, Exit</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1><span class="chirokumar">Chirokumar</span> <span class="hub">Hub</span></h1>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <!-- Featured Videos Section -->
+        <section>
+            <h2 class="section-title">Featured Videos</h2>
+            <div class="video-grid">
+                <!-- Video Cards (4 columns, 3 rows = 12 videos) -->
+                <div class="video-card">
+                    <a href="video1.html">
+                        <img src="thumbnail1.jpg" alt="Video Thumbnail">
+                        <h3>Video 1</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video2.html">
+                        <img src="thumbnail2.jpg" alt="Video Thumbnail">
+                        <h3>Video 2</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video3.html">
+                        <img src="thumbnail3.jpg" alt="Video Thumbnail">
+                        <h3>Video 3</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video4.html">
+                        <img src="thumbnail4.jpg" alt="Video Thumbnail">
+                        <h3>Video 4</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video5.html">
+                        <img src="thumbnail5.jpg" alt="Video Thumbnail">
+                        <h3>Video 5</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video6.html">
+                        <img src="thumbnail6.jpg" alt="Video Thumbnail">
+                        <h3>Video 6</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video7.html">
+                        <img src="thumbnail7.jpg" alt="Video Thumbnail">
+                        <h3>Video 7</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video8.html">
+                        <img src="thumbnail8.jpg" alt="Video Thumbnail">
+                        <h3>Video 8</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video9.html">
+                        <img src="thumbnail9.jpg" alt="Video Thumbnail">
+                        <h3>Video 9</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video10.html">
+                        <img src="thumbnail10.jpg" alt="Video Thumbnail">
+                        <h3>Video 10</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video11.html">
+                        <img src="thumbnail11.jpg" alt="Video Thumbnail">
+                        <h3>Video 11</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="video12.html">
+                        <img src="thumbnail12.jpg" alt="Video Thumbnail">
+                        <h3>Video 12</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript for Popup Logic -->
+    <script>
+        // Show the popup on page load
+        window.onload = function() {
+            document.querySelector('.overlay').style.display = 'block';
+            document.querySelector('.popup').style.display = 'block';
+        };
+
+        // "Yes, I am 18+. Enter" button click event
+        document.querySelector('.yes-button').addEventListener('click', function() {
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelector('.popup').style.display = 'none';
+        });
+
+        // "Be Chirokumar, Exit" button click event
+        document.querySelector('.exit-button').addEventListener('click', function() {
+            window.location.href = 'exit.html'; // Redirect to exit page
+        });
+    </script>
+
+</body>
+</html>

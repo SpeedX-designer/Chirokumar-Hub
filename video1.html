@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 1 - Chirokumar Hub</title>
+    <style>
+        /* Basic Reset and Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #FFD700;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            display: inline-block;
+        }
+
+        .chirokumar {
+            color: #fff; /* White color */
+        }
+
+        .hub {
+            background-color: #ffb300; /* Orange background */
+            color: #000; /* Black text */
+            padding: 0.2em 0.5em; /* Padding for button-like appearance */
+            border-radius: 5px;
+        }
+
+        /* Main Video Section */
+        .main-video {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .main-video video {
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .video-title {
+            font-size: 1.5em;
+            color: #ffb300;
+            margin: 1em 0;
+        }
+
+        /* Other Videos Section */
+        .other-videos {
+            margin-top: 3em;
+            text-align: center;
+        }
+
+        .other-videos h2 {
+            color: #ffb300;
+            margin-bottom: 1em;
+        }
+
+        .video-thumbnails {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .video-thumbnail {
+            width: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #1c1c1c;
+            transition: transform 0.2s;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .video-thumbnail h3 {
+            color: #ffb300;
+            padding: 0.5em;
+            background-color: #333;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1><span class="chirokumar">Chirokumar</span> <span class="hub">Hub</span></h1>
+    </header>
+
+    <!-- Main Video Section -->
+    <section class="main-video">
+<video controls>
+            <source src="vid1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Other Videos Section -->
+    <section class="other-videos">
+        <h2>Other Videos You May Like</h2>
+        <div class="video-thumbnails">
+            <div class="video-thumbnail">
+                <a href="video2.html">
+                    <img src="thumbnail2.jpg" alt="Video 2 Thumbnail">
+                    <h3>Video 2</h3>
+                </a>
+            </div>
+            <div class="video-thumbnail">
+                <a href="video3.html">
+                    <img src="thumbnail3.jpg" alt="Video 3 Thumbnail">
+                    <h3>Video 3</h3>
+                </a>
+            </div>
+            <div class="video-thumbnail">
+                <a href="video4.html">
+                    <img src="thumbnail4.jpg" alt="Video 4 Thumbnail">
+                    <h3>Video 4</h3>
+                </a>
+            </div>
+            <div class="video-thumbnail">
+                <a href="video5.html">
+                    <img src="thumbnail5.jpg" alt="Video 5 Thumbnail">
+                    <h3>Video 5</h3>
+                </a>
+            </div>
+			
+        </div>
+    </section>
+
+</body>
+</html>
